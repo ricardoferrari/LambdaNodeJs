@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+Transform: AWS::Serverless-2016-10-31
 Description: An AWS Lambda application that calls the Lambda API.
 Resources:
   function:
@@ -7,22 +7,21 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs20.x
-      CodeUri: function/.
+      CodeUri: s3://lambda-artifacts-2cab04e4b3d39281/ba8111063cdf325094b61af9039f428c
       Description: Call the AWS Lambda API
       Timeout: 10
-      # Function's execution role
       Policies:
-        - AWSLambdaBasicExecutionRole
-        - AWSLambda_ReadOnlyAccess
-        - AWSXrayWriteOnlyAccess
+      - AWSLambdaBasicExecutionRole
+      - AWSLambda_ReadOnlyAccess
+      - AWSXrayWriteOnlyAccess
       Tracing: Active
       Layers:
-        - !Ref libs
+      - Ref: libs
   libs:
     Type: AWS::Serverless::LayerVersion
     Properties:
       LayerName: blank-nodejs-lib
       Description: Dependencies for the blank sample app.
-      ContentUri: lib/.
+      ContentUri: s3://lambda-artifacts-2cab04e4b3d39281/918b0ca4ec5d23c6487ac448f7e96510
       CompatibleRuntimes:
-        - nodejs20.x
+      - nodejs20.x
