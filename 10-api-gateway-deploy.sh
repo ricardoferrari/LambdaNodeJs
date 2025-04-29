@@ -7,6 +7,6 @@ awslocal apigateway create-deployment \
 
 
 # awslocal apigateway create-deployment \
-#   --rest-api-id smkyiwb4nh \
+#   --rest-api-id kjbv0g2z1g \
 #   --stage-name dev
   

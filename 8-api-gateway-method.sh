@@ -11,8 +11,8 @@ awslocal apigateway put-method \
 
 
   # awslocal apigateway put-method \
-  # --rest-api-id smkyiwb4nh \
-  # --resource-id 2vjt8fbj42 \
+  # --rest-api-id kjbv0g2z1g \
+  # --resource-id emtij4lvj4 \
   # --http-method GET \
   # --request-parameters "method.request.path.somethingId=true" \
   # --authorization-type "NONE"

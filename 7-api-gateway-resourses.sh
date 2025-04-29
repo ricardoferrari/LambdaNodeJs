@@ -5,9 +5,9 @@ PARENT_ID=(awslocal apigateway get-resources --rest-api-id ${REST_API_ID} | jq -
 awslocal apigateway create-resource \
   --rest-api-id $REST_API_ID \
   --parent-id $PARENT_ID \
-  --path-part "/hello"
+  --path-part "hello"
 
   # awslocal apigateway create-resource \
-  # --rest-api-id smkyiwb4nh \
-  # --parent-id ubawwr2cse \
-  # --path-part "/hello"
+  # --rest-api-id kjbv0g2z1g \
+  # --parent-id phvyauzyxf \
+  # --path-part "hello"

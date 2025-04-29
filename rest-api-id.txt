@@ -1,0 +1,13 @@
+{
+ "id": "kjbv0g2z1g",
+ "name": "API Gateway Lambda integration",
+ "createdDate": 1745894701.0,
+ "apiKeySource": "HEADER",
+ "endpointConfiguration": {
+ "types": [
+ "EDGE"
+ ]
+ },
+ "disableExecuteApiEndpoint": false,
+ "rootResourceId": "phvyauzyxf"
+ }
